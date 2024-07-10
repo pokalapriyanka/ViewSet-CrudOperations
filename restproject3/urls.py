@@ -22,9 +22,10 @@ from app.views import *
 DRO=DefaultRouter()
 
 DRO.register('ProductCrudView',ProductCrudView,basename='ProductCrudView')
+DRO.register('ProductCrudMVS',ProductCrudMVS,basename='ProductCrudMVS')
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('app/',include(DRO.urls))
+    path('app/',include(DRO.urls)) 
 ]
